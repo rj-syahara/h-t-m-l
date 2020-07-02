@@ -2,18 +2,47 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="assessment.css">
-    <title>あなたのいいところ診断</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <title>HTMLタグうらない</title>
+    <link rel="stylesheet" href="assets/normalize.css">
+    <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <h1>あなたのいいところは?</h1>
-    <p>診断したい名前を入れて下さい</p>
-    <input type="text" id="user-name" size="40" maxlength="20">
-    <button id="assessment">診断する</button>
-    <div id="result-area"></div>
-    <div id="tweet-area">
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-    </div>
-    <script src="assessment.js"></script>
+    <header>
+        <div id="title-area">
+            <h1>H.T.M.L.</h1>
+            <p class="tagline">Happy Today with Markup Language</p>  
+        </div>
+    </header>
+    <main>
+        <div id="input-area">
+            <!-- <p class="lead">今日 M月D日 の、あなたのHAPPYタグは…？</p> -->
+            <p class="lead">あなたのHAPPYタグは…？</p>
+            <p>診断したい名前を入力してください</p>
+            <dl>
+                <dt>お名前</dt>
+                <dd><input type="text" name="お名前" id="user-name" size="40" maxlength="30"></dd>
+                <!-- <dt>生年月日</dt> -->
+                <!-- <dd><input type="date" name="生年月日" id="user-birthday" size="40" maxlength="30"></dd> -->
+            </dl>
+            <button id="assessment">送信して、今日のHAPPYタグを見る</button>  
+        </div>
+
+        <div id="result-area"></div>
+        <div id="tweet-area">
+            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+        </div>
+    
+    </main>
+    <footer>
+        <hr>
+        <p>この診断プログラムは、<a href="https://www.nnn.ed.nico/pages/programming/" target="_blank">N予備校 Webプログラミング入門コース</a>の<a href="https://progedu.github.io/intro-sample/assessment.html" target="_blank">あなたのいいところ診断</a>をベースに、学習した成果を盛り込んで改造を続けて作成したものです。</p>
+        <hr>
+        <div id="copyright">
+          <small>(c) 2020 Shoshiro Yahara</small>
+        </div>
+      </footer>
+    <script src="assets/assessment.js"></script>
 </body>
 </html>
